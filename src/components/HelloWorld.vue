@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button type="button" class="btn btn-primary" @click="increment">count is {{ count }}</button>
+    歡迎來首頁
   </div>
 </template>
 

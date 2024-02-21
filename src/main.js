@@ -1,4 +1,8 @@
+import 'bootstrap/scss/bootstrap.scss'
 import './assets/main.css'
+import * as Vue from 'vue' // in Vue 3
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
@@ -10,5 +14,6 @@ const app = createApp(App)
 
 app.use(createPinia())
 app.use(router)
-
+app.use(VueAxios, axios)
+console.log(Vue)
 app.mount('#app')
