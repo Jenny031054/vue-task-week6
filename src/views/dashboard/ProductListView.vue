@@ -61,7 +61,7 @@
       <!-- pagination -->
       <!-- END pagination -->
       <!-- Modal -->
-      <DashboardProductModal @update-product="getData" :product="productTemp" :is-new="isNew" ref="dashboardProductModal" />
+      <DashboardProductModal @update-data="getData" :product="productTemp" :is-new="isNew" ref="dashboardProductModal" />
       <!-- END Modal -->
       <!-- 刪除modal -->
       <del-product-modal :del-item="productTemp" @get-data="getData" ref="delProductModal"></del-product-modal>
@@ -103,7 +103,7 @@ export default {
         this.$refs.dashboardProductModal.showModal()
       } else if (status === 'edit') {
         this.productTemp = { ...item }
-        // console.log(this.productTemp)
+        console.log(this.productTemp)
         this.isNew = false
         this.$refs.dashboardProductModal.showModal()
       } else if (status === 'delete') {

@@ -144,9 +144,14 @@ export default {
   },
   // 這個生命週期的時候可以取得網頁DOM元素，所以在這裡先抓到modal，接著界可以用他的變數名稱操控
   mounted () {
+    this.editProduct = this.product
     // 建立productModal
     this.dashboardProductModal = new Modal(this.$refs.dashboardProductModal)
-    this.editProduct = this.product
+  },
+  watch: {
+    product () {
+      this.editProduct = this.product
+    }
   },
   methods: {
     updateProduct () {

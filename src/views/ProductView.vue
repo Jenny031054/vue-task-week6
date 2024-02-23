@@ -1,5 +1,5 @@
 <template>
-  <div class="w-100">
+  <div class="container-fluid">
     <h1>這裡是商品頁面</h1>
     <hr>
     <table class="table align-middle">
